@@ -22,7 +22,8 @@ div.article, div.masthead {
 }
 
 div.article {
-    min-height: 29.7cm;
+    height: 29.7cm;
+    display: inline-block;
 }
 
 h1.masthead {
