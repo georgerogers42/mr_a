@@ -89,8 +89,6 @@ func LoadArticle(fname string) (*Article, error) {
 	return article, nil
 }
 
-type ArticlesMap map[string]*Article
-
 var ArticleList, ArticleMap Articles
 
 func init() {
@@ -98,7 +96,7 @@ func init() {
 	if err != nil {
 		panic(err)
 	}
-	articleMap = make(Articles, len(articleList))
+	articleMap := make(Articles, len(articleList))
 	l := len(articleList) - 1
 	for i := range articleList {
 		articleMap[l-i] = articleList[i]
