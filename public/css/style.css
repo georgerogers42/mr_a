@@ -21,24 +21,24 @@ div.article, div.masthead {
     width: 8.5in;
 }
 
-div.masthead h1 {
+div.masthead > h1 {
     text-align: center;
     font-size: 2cm;
 }
 
-div.article h1 {
+div.article > h1 {
     font-size: 15mm;
 }
 
-div.article h2 {
+div.article > h2 {
     font-size: 17.5mm;
 }
 
-div.contents h1 {
+div.contents > h1 {
     font-size: 1cm;
 }
 
-div.contents h2 {
+div.contents > h2 {
     font-size: 7.5mm;
 }
 
