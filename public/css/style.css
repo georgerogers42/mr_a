@@ -19,6 +19,9 @@ div.article, div.masthead {
     margin-top: 0.5in;
     margin-bottom: 0.5in;
     width: 21cm;
+}
+
+div.article {
     height: 29.7cm;
 }
 
