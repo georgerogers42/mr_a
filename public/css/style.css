@@ -21,8 +21,8 @@ div.article, div.masthead {
     width: 8.5in;
 }
 
-div.masthead > h1 {
-    text-align: center;
+h1.masthead {
+    text: center;
     font-size: 2cm;
 }
 
