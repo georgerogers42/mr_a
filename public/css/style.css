@@ -1,7 +1,7 @@
 body {
     font-family: 'Noto Serif', serif;
     background: black;
-    font-size: 5mm;
+    font-size: 0.25cm;
 }
 
 a {
@@ -18,7 +18,7 @@ div.article, div.masthead {
     margin: auto;
     margin-top: 0.5in;
     margin-bottom: 0.5in;
-    width: 8.5in;
+    width: 21cm;
 }
 
 h1.masthead {
@@ -27,11 +27,11 @@ h1.masthead {
 }
 
 h1.article {
-    font-size: 15mm;
+    font-size: 1.25cm;
 }
 
 h2.article {
-    font-size: 17.5mm;
+    font-size: 1cm;
 }
 
 h1 {
@@ -39,5 +39,5 @@ h1 {
 }
 
 h2 {
-    font-size: 7.5mm;
+    font-size: .75cm;
 }
