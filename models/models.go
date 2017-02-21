@@ -104,4 +104,5 @@ func init() {
 		articleMap[l-i] = articleList[i]
 	}
 	ArticleList = articleList
+	ArticleMap = articleMap
 }
