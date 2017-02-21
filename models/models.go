@@ -32,6 +32,14 @@ func (a Articles) Swap(i, j int) {
 	a[i], a[j] = a[j], a[i]
 }
 
+func (a Articles) ArticlesMap() ArticlesMap {
+	articlesMap := ArticlesMap{}
+	for _, article := range a {
+		articlesMap[article.Slug] = article
+	}
+	return articlesMap
+}
+
 func LoadArticles(pat string) (Articles, error) {
 	fnames, err := filepath.Glob(pat)
 	if err != nil {
@@ -80,3 +88,5 @@ func LoadArticle(fname string) (*Article, error) {
 	article.Content = contents
 	return article, nil
 }
+
+type ArticlesMap map[string]*Article
