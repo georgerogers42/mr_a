@@ -22,7 +22,7 @@ div.article, div.masthead {
 }
 
 h1.masthead {
-    text: center;
+    text-align: center;
     font-size: 2cm;
 }
 
