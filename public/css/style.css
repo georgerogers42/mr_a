@@ -23,7 +23,7 @@ div.article, div.masthead {
 
 div.article {
     height: 10cm;
-    display: inline-block;
+    display: block;
 }
 
 h1.masthead {
