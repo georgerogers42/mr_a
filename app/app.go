@@ -12,7 +12,7 @@ var App = mux.NewRouter()
 
 func init() {
 	App.HandleFunc("/", Index).Methods("GET")
-	App.HandleFunc("/article/{i}", Article).Methods("GET")
+	App.HandleFunc("/chapter/{i}", Article).Methods("GET")
 }
 
 var baseTpl = template.Must(template.ParseFiles("tpl/base.tpl"))
