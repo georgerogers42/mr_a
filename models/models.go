@@ -99,7 +99,7 @@ func init() {
 	articleMap := make(Articles, len(articleList))
 	l := len(articleList) - 1
 	for i := range articleList {
-		articleMap[l-i] = articleList[i]
+		articleMap[i] = articleList[i]
 	}
 	ArticleList = articleList
 	ArticleMap = articleMap
