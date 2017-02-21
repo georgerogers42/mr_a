@@ -3,6 +3,7 @@ package models
 import (
 	"bufio"
 	"encoding/json"
+	"html/template"
 	"os"
 	"path/filepath"
 	"sort"
@@ -18,6 +19,10 @@ type Metadata struct {
 type Article struct {
 	Metadata
 	Content string
+}
+
+func (a *Article) HtmlContent() template.HTML {
+	return template.HTML(a.Content)
 }
 
 type Articles []*Article
@@ -76,7 +81,10 @@ func LoadArticle(fname string) (*Article, error) {
 		return nil, err
 	}
 	article := &Article{}
-	json.Unmarshal([]byte(mdata), &article.Metadata)
+	err = json.Unmarshal([]byte(mdata), &article.Metadata)
+	if err != nil {
+		return nil, err
+	}
 	contents := ""
 	for s.Scan() {
 		t := s.Text()
