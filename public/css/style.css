@@ -26,20 +26,18 @@ div.masthead > h1 {
     font-size: 2cm;
 }
 
-div.article > h1 {
+h1.article {
     font-size: 15mm;
 }
 
-div.article > h2 {
+h2.article {
     font-size: 17.5mm;
 }
 
-div.contents > h1 {
+h1 {
     font-size: 1cm;
 }
 
-div.contents > h2 {
+h2 {
     font-size: 7.5mm;
 }
-
-h3
