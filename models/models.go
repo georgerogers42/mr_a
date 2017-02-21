@@ -50,7 +50,7 @@ func LoadArticles(pat string) (Articles, error) {
 		}
 		articles = append(articles, article)
 	}
-	sort.Sort(articles)
+	sort.Sort(sort.Reverse(articles))
 	return articles, nil
 }
 
