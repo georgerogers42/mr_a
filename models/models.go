@@ -92,7 +92,7 @@ func LoadArticle(fname string) (*Article, error) {
 var ArticleList, ArticleMap Articles
 
 func init() {
-	articleList, err := LoadArticles("articles/*.html")
+	articleList, err := LoadArticles("chapters/*.html")
 	if err != nil {
 		panic(err)
 	}
