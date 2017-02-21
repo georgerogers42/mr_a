@@ -97,7 +97,6 @@ func init() {
 		panic(err)
 	}
 	articleMap := make(Articles, len(articleList))
-	l := len(articleList) - 1
 	for i := range articleList {
 		articleMap[i] = articleList[i]
 	}
