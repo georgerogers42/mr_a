@@ -11,9 +11,9 @@ import (
 )
 
 type Metadata struct {
-	Serial              uint64
-	Author, Title, Slug string
-	Posted              time.Time
+	Serial        int
+	Author, Title string
+	Posted        time.Time
 }
 
 type Article struct {
@@ -35,14 +35,6 @@ func (a Articles) Less(i, j int) bool {
 }
 func (a Articles) Swap(i, j int) {
 	a[i], a[j] = a[j], a[i]
-}
-
-func (a Articles) ArticleMap() ArticlesMap {
-	articlesMap := ArticlesMap{}
-	for _, article := range a {
-		articlesMap[article.Slug] = article
-	}
-	return articlesMap
 }
 
 func LoadArticles(pat string) (Articles, error) {
@@ -100,8 +92,6 @@ func LoadArticle(fname string) (*Article, error) {
 type ArticlesMap map[string]*Article
 
 var ArticleList Articles
-
-var ArticleMap = ArticleList.ArticleMap()
 
 func init() {
 	articleList, err := LoadArticles("articles/*.html")

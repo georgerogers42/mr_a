@@ -2,7 +2,6 @@
 <title>Mr A</title>
 {{ end }}
 {{ define "body" }}
-{{ range . }}
 <div class="article">
 <h1 class="article"><a href="/article/{{ .Serial }}">{{ .Serial }}</a>&ndash;{{ .Title }}</h1>
 <h2 class="article">{{ .Posted }}</h2>
@@ -10,5 +9,4 @@
 {{ .HtmlContent }}
 </div>
 </div>
-{{ end }}
 {{ end }}
