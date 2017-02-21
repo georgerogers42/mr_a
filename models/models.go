@@ -91,12 +91,17 @@ func LoadArticle(fname string) (*Article, error) {
 
 type ArticlesMap map[string]*Article
 
-var ArticleList Articles
+var ArticleList, ArticleMap Articles
 
 func init() {
 	articleList, err := LoadArticles("articles/*.html")
 	if err != nil {
 		panic(err)
+	}
+	articleMap = make(Articles, len(articleList))
+	l := len(articleList) - 1
+	for i := range articleList {
+		articleMap[l-i] = articleList[i]
 	}
 	ArticleList = articleList
 }

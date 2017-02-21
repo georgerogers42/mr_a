@@ -20,7 +20,7 @@ var baseTpl = template.Must(template.ParseFiles("tpl/base.tpl"))
 var indexTpl = template.Must(template.Must(baseTpl.Clone()).ParseFiles("tpl/index.tpl"))
 
 func Index(w http.ResponseWriter, r *http.Request) {
-	indexTpl.Execute(w, models.ArticleList)
+	indexTpl.Execute(w, articles)
 }
 
 var articleTpl = template.Must(template.Must(baseTpl.Clone()).ParseFiles("tpl/article.tpl"))
@@ -29,9 +29,9 @@ func Article(w http.ResponseWriter, r *http.Request) {
 	i := 0
 	vars := mux.Vars(r)
 	_, err := fmt.Sscan(vars["i"], &i)
-	if err != nil || i > len(models.ArticleList) {
+	if err != nil || i > len(models.ArticleMap) {
 		http.NotFound(w, r)
 		return
 	}
-	articleTpl.Execute(w, models.ArticleList[i])
+	articleTpl.Execute(w, models.ArticleMap[i])
 }
