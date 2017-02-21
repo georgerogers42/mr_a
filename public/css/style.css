@@ -22,7 +22,7 @@ div.article, div.masthead {
 }
 
 div.article {
-    height: 29.7cm;
+    min-height: 29.7cm;
 }
 
 h1.masthead {
