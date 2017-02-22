@@ -15,7 +15,7 @@ func init() {
 	App.HandleFunc("/chapter/{i}", Article).Methods("GET")
 }
 
-var baseTpl = template.Must(template.ParseFiles("tpl/base.tpl"))
+var baseTpl = template.Must(template.ParseFiles("tpl/base.tpl", "tpl/body.tpl"))
 
 var indexTpl = template.Must(template.Must(baseTpl.Clone()).ParseFiles("tpl/index.tpl"))
 
